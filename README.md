@@ -15,6 +15,10 @@ Software
 - PHP 5.4.4
 - Apache 2.2
 
+Note: to run plack example, please enter following command to clone repository
+
+    git clone https://github.com/plack/Plack.git plack
+
 ## Hello world test case
 
 

@@ -87,68 +87,6 @@ Time per request:       3.106 [ms] (mean)
     100%     13 (longest request)
 
 
-Concurrent 5, 1000 requests
-
-Requests per second:    6438.74 [#/sec] (mean)
-
-Time per request:       3.106 [ms] (mean)
-
-    ab -n 1000 -c 5 http://127.0.0.1:8124/ 
-    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-    Licensed to The Apache Software Foundation, http://www.apache.org/
-
-    Benchmarking 127.0.0.1 (be patient)
-    Completed 100 requests
-    Completed 200 requests
-    Completed 300 requests
-    Completed 400 requests
-    Completed 500 requests
-    Completed 600 requests
-    Completed 700 requests
-    Completed 800 requests
-    Completed 900 requests
-    Completed 1000 requests
-    Finished 1000 requests
-
-
-    Server Software:        
-    Server Hostname:        127.0.0.1
-    Server Port:            8124
-
-    Document Path:          /
-    Document Length:        12 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   0.173 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      113000 bytes
-    HTML transferred:       12000 bytes
-    Requests per second:    5776.17 [#/sec] (mean)
-    Time per request:       0.866 [ms] (mean)
-    Time per request:       0.173 [ms] (mean, across all concurrent requests)
-    Transfer rate:          637.41 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       5
-    Processing:     0    1   1.3      1      11
-    Waiting:        0    1   1.2      0      10
-    Total:          0    1   1.3      1      11
-
-    Percentage of the requests served within a certain time (ms)
-    50%      1
-    66%      1
-    75%      1
-    80%      1
-    90%      1
-    95%      2
-    98%      5
-    99%      8
-    100%     11 (longest request)
-
 ### Express.js
 
 Empty skeleton, Hello world app
@@ -194,45 +132,6 @@ Time per request:       10.846 [ms] (mean)
     99%     18
     100%     21 (longest request)
 
-Concurrent 5, 1000 requests:
-
-Requests per second:    1356.17 [#/sec] (mean)
-Time per request:       3.687 [ms] (mean)
-
-    ab -n 1000 -c 5 http://127.0.0.1:3000/
-
-    Document Path:          /
-    Document Length:        206 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   0.737 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      485060 bytes
-    HTML transferred:       206000 bytes
-    Requests per second:    1356.17 [#/sec] (mean)
-    Time per request:       3.687 [ms] (mean)
-    Time per request:       0.737 [ms] (mean, across all concurrent requests)
-    Transfer rate:          642.40 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       1
-    Processing:     1    3   1.8      3      15
-    Waiting:        1    3   1.7      3      15
-    Total:          1    4   1.8      3      16
-
-    Percentage of the requests served within a certain time (ms)
-    50%      3
-    66%      4
-    75%      4
-    80%      4
-    90%      5
-    95%      6
-    98%      7
-    99%     15
-    100%     16 (longest request)
 
 
 ### Batman.js
@@ -279,91 +178,8 @@ Time per request:       9.976 [ms] (mean)
     99%     32
     100%     33 (longest request)
 
-Concurrent 5, 1000 requests
-
-Requests per second:    1677.64 [#/sec] (mean)
-Time per request:       2.980 [ms] (mean)
-
-    $ ab -n 1000 -c 5 http://127.0.0.1:1047/ 
-
-    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-    Licensed to The Apache Software Foundation, http://www.apache.org/
-
-    Document Path:          /
-    Document Length:        1587 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   0.596 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      1826000 bytes
-    HTML transferred:       1587000 bytes
-    Requests per second:    1677.64 [#/sec] (mean)
-    Time per request:       2.980 [ms] (mean)
-    Time per request:       0.596 [ms] (mean, across all concurrent requests)
-    Transfer rate:          2991.58 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.2      0       4
-    Processing:     1    3   2.6      2      20
-    Waiting:        1    2   2.1      2      20
-    Total:          1    3   2.6      2      20
-
-    Percentage of the requests served within a certain time (ms)
-    50%      2
-    66%      2
-    75%      3
-    80%      3
-    90%      4
-    95%      7
-    98%     15
-    99%     19
-    100%     20 (longest request)
-
 ### Apache + PHP Roller Router + Extension + APC
 
-Concurrent 5, 1000 requests:
-
-Requests per second:    496.21 [#/sec] (mean)
-Time per request:       10.076 [ms] (mean)
-
-    $ ab -n 1000 -c 5 http://roller.dev/
-
-    Document Path:          /
-    Document Length:        70 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   2.015 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      285000 bytes
-    HTML transferred:       70000 bytes
-    Requests per second:    496.21 [#/sec] (mean)
-    Time per request:       10.076 [ms] (mean)
-    Time per request:       2.015 [ms] (mean, across all concurrent requests)
-    Transfer rate:          138.11 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.6      0       5
-    Processing:     6   10   3.0      9      24
-    Waiting:        4   10   3.0      9      24
-    Total:          6   10   3.0      9      24
-
-    Percentage of the requests served within a certain time (ms)
-    50%      9
-    66%     11
-    75%     12
-    80%     12
-    90%     14
-    95%     16
-    98%     18
-    99%     20
-    100%     24 (longest request)
 
 Concurrent 20, 1000 request
 
@@ -408,44 +224,6 @@ Time per request:       40.191 [ms] (mean)
 
 ### Perl 5.15.7 + Plack + Twiggy + Hello World
 
-Concurrent 5, 1000 requests
-
-Requests per second:    2310.10 [#/sec] (mean)
-Time per request:       2.164 [ms] (mean)
-
-    $ ab -n 1000 -c 5 http://0.0.0.0:5000/ 
-    Document Path:          /
-    Document Length:        11 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   0.433 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      76000 bytes
-    HTML transferred:       11000 bytes
-    Requests per second:    2310.10 [#/sec] (mean)
-    Time per request:       2.164 [ms] (mean)
-    Time per request:       0.433 [ms] (mean, across all concurrent requests)
-    Transfer rate:          171.45 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       2
-    Processing:     0    2   0.6      2      10
-    Waiting:        0    2   0.5      2       9
-    Total:          1    2   0.5      2      10
-
-    Percentage of the requests served within a certain time (ms)
-    50%      2
-    66%      2
-    75%      2
-    80%      2
-    90%      2
-    95%      3
-    98%      3
-    99%      3
-    100%     10 (longest request)
 
 Concurrent 20, 1000 requests
 
@@ -489,50 +267,6 @@ Time per request:       9.449 [ms] (mean)
 
 ### Perl 5.15.7 + Plack + Feersum + Hello World
 
-Concurrent 5, 1000 requests
-
-Requests per second:    11860.99 [#/sec] (mean)
-Time per request:       0.422 [ms] (mean)
-
-    $ ab -n 1000 -c 5 http://0.0.0.0:5000/
-
-    Server Software:        
-    Server Hostname:        0.0.0.0
-    Server Port:            5000
-
-    Document Path:          /
-    Document Length:        11 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   0.084 seconds
-    Complete requests:      1000
-    Failed requests:        0
-    Write errors:           0
-    Total transferred:      76000 bytes
-    HTML transferred:       11000 bytes
-    Requests per second:    11860.99 [#/sec] (mean)
-    Time per request:       0.422 [ms] (mean)
-    Time per request:       0.084 [ms] (mean, across all concurrent requests)
-    Transfer rate:          880.31 [Kbytes/sec] received
-
-    Connection Times (ms)
-                min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       0
-    Processing:     0    0   0.1      0       1
-    Waiting:        0    0   0.1      0       1
-    Total:          0    0   0.1      0       1
-
-    Percentage of the requests served within a certain time (ms)
-    50%      0
-    66%      0
-    75%      0
-    80%      0
-    90%      1
-    95%      1
-    98%      1
-    99%      1
-    100%      1 (longest request)
-
 Concurrent 20, 1000 requests
 
 Requests per second:    13741.93 [#/sec] (mean)
@@ -573,3 +307,102 @@ Time per request:       1.455 [ms] (mean)
     99%      2
     100%      3 (longest request)
 
+### Perl5.15.7 + Mojo + Feersum
+
+20 Concurrent, 1000 requests
+
+    ab -n 1000 -c 20 http://0.0.0.0:5000/
+
+    Document Path:          /
+    Document Length:        12 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   1.101 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      160160 bytes
+    HTML transferred:       12012 bytes
+    Requests per second:    908.37 [#/sec] (mean)
+    Time per request:       22.017 [ms] (mean)
+    Time per request:       1.101 [ms] (mean, across all concurrent requests)
+    Transfer rate:          142.08 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       2
+    Processing:     9   22   3.3     21      42
+    Waiting:        2   18   4.7     20      28
+    Total:          9   22   3.3     21      42
+
+    Percentage of the requests served within a certain time (ms)
+    50%     21
+    66%     22
+    75%     22
+    80%     22
+    90%     24
+    95%     30
+    98%     30
+    99%     33
+    100%     42 (longest request)
+
+### Perl5.15.7 + Dancer + Feersum
+
+Requests per second:    1375.89 [#/sec] (mean)
+Time per request:       14.536 [ms] (mean)
+
+    ab -n 1000 -c 20 http://0.0.0.0:5000/
+    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 0.0.0.0 (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:        Perl
+    Server Hostname:        0.0.0.0
+    Server Port:            5000
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   0.703 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      150000 bytes
+    HTML transferred:       11000 bytes
+    Requests per second:    1421.66 [#/sec] (mean)
+    Time per request:       14.068 [ms] (mean)
+    Time per request:       0.703 [ms] (mean, across all concurrent requests)
+    Transfer rate:          208.25 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     3   14   0.8     14      15
+    Waiting:        3   14   0.8     14      15
+    Total:          4   14   0.8     14      15
+
+    Percentage of the requests served within a certain time (ms)
+    50%     14
+    66%     14
+    75%     14
+    80%     14
+    90%     15
+    95%     15
+    98%     15
+    99%     15
+    100%     15 (longest request)

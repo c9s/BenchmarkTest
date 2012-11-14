@@ -351,11 +351,6 @@ Time per request:       1.455 [ms] (mean)
 Requests per second:    1375.89 [#/sec] (mean)
 Time per request:       14.536 [ms] (mean)
 
-    ab -n 1000 -c 20 http://0.0.0.0:5000/
-    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-    Licensed to The Apache Software Foundation, http://www.apache.org/
-
     Benchmarking 0.0.0.0 (be patient)
     Completed 100 requests
     Completed 200 requests
@@ -378,31 +373,31 @@ Time per request:       14.536 [ms] (mean)
     Document Length:        11 bytes
 
     Concurrency Level:      20
-    Time taken for tests:   0.703 seconds
+    Time taken for tests:   0.708 seconds
     Complete requests:      1000
     Failed requests:        0
     Write errors:           0
     Total transferred:      150000 bytes
     HTML transferred:       11000 bytes
-    Requests per second:    1421.66 [#/sec] (mean)
-    Time per request:       14.068 [ms] (mean)
-    Time per request:       0.703 [ms] (mean, across all concurrent requests)
-    Transfer rate:          208.25 [Kbytes/sec] received
+    Requests per second:    1412.70 [#/sec] (mean)
+    Time per request:       14.157 [ms] (mean)
+    Time per request:       0.708 [ms] (mean, across all concurrent requests)
+    Transfer rate:          206.94 [Kbytes/sec] received
 
     Connection Times (ms)
                 min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       1
+    Connect:        0    0   0.2      0       1
     Processing:     3   14   0.8     14      15
     Waiting:        3   14   0.8     14      15
-    Total:          4   14   0.8     14      15
+    Total:          4   14   0.8     14      16
 
     Percentage of the requests served within a certain time (ms)
     50%     14
     66%     14
-    75%     14
-    80%     14
+    75%     15
+    80%     15
     90%     15
     95%     15
     98%     15
-    99%     15
-    100%     15 (longest request)
+    99%     16
+    100%     16 (longest request)

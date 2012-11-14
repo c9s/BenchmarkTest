@@ -1,0 +1,3 @@
+[submodule "cases/plack"]
+	path = cases/plack
+	url = https://github.com/plack/Plack.git

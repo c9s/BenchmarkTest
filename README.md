@@ -17,6 +17,134 @@ Software
 
 ## Hello world test case
 
+
+### Nodejs + Pure HTTP Server
+
+Concurrent 20, 1000 requests
+
+Requests per second:    6438.74 [#/sec] (mean)
+
+Time per request:       3.106 [ms] (mean)
+
+    ab -n 1000 -c 20 http://127.0.0.1:8124/
+    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8124
+
+    Document Path:          /
+    Document Length:        12 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   0.155 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      113000 bytes
+    HTML transferred:       12000 bytes
+    Requests per second:    6438.74 [#/sec] (mean)
+    Time per request:       3.106 [ms] (mean)
+    Time per request:       0.155 [ms] (mean, across all concurrent requests)
+    Transfer rate:          710.52 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0       6
+    Processing:     0    3   2.3      2      13
+    Waiting:        0    3   2.3      2      13
+    Total:          0    3   2.3      3      13
+
+    Percentage of the requests served within a certain time (ms)
+    50%      3
+    66%      3
+    75%      4
+    80%      4
+    90%      6
+    95%      9
+    98%     11
+    99%     12
+    100%     13 (longest request)
+
+
+Concurrent 5, 1000 requests
+
+Requests per second:    6438.74 [#/sec] (mean)
+
+Time per request:       3.106 [ms] (mean)
+
+    ab -n 1000 -c 5 http://127.0.0.1:8124/ 
+    This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+    Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+    Licensed to The Apache Software Foundation, http://www.apache.org/
+
+    Benchmarking 127.0.0.1 (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:        
+    Server Hostname:        127.0.0.1
+    Server Port:            8124
+
+    Document Path:          /
+    Document Length:        12 bytes
+
+    Concurrency Level:      5
+    Time taken for tests:   0.173 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      113000 bytes
+    HTML transferred:       12000 bytes
+    Requests per second:    5776.17 [#/sec] (mean)
+    Time per request:       0.866 [ms] (mean)
+    Time per request:       0.173 [ms] (mean, across all concurrent requests)
+    Transfer rate:          637.41 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       5
+    Processing:     0    1   1.3      1      11
+    Waiting:        0    1   1.2      0      10
+    Total:          0    1   1.3      1      11
+
+    Percentage of the requests served within a certain time (ms)
+    50%      1
+    66%      1
+    75%      1
+    80%      1
+    90%      1
+    95%      2
+    98%      5
+    99%      8
+    100%     11 (longest request)
+
 ### Express.js
 
 Empty skeleton, Hello world app

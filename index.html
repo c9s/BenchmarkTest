@@ -7,7 +7,9 @@
     </head>
 <body>
 <div id="container" style="min-width: 400px; min-height: 600px; margin: 0 auto"></div>
-<a href="http://github.com/c9s/BenchmarkTest">benchmark details</a>
+<div style="text-align: center;">
+    <a href="http://github.com/c9s/BenchmarkTest">benchmark details</a>
+</div>
 <script>
 $(function () {
     var chart;
@@ -21,6 +23,7 @@ $(function () {
             subtitle: { text: 'higher is better.' },
             xAxis: {
                 categories: [
+                    'Node0.8 + pure http server',
                     'Node0.8 + Express.js',
                     'Node0.8 + Batman.js',
                     'PHP5.4 + Roller',
@@ -58,7 +61,7 @@ $(function () {
             },
             series: [{
                 name: '#/s',
-                data: [1843.99, 2004.76, 497.62, 2116, 13741]
+                data: [6438, 1843.99, 2004.76, 497.62, 2116, 13741]
             }]
         });
     });

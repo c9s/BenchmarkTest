@@ -71,45 +71,35 @@ Empty skeleton, Hello world app
 
 Concurrent 20, 1000 requests
 
-Requests per second:    1843.99 [#/sec] (mean)
-
-Time per request:       10.846 [ms] (mean)
-
-    $ ab -n 1000 -c 20 http://127.0.0.1:3000/
-
-    Document Path:          /
-    Document Length:        206 bytes
-
     Concurrency Level:      20
-    Time taken for tests:   0.542 seconds
-    Complete requests:      1000
+    Time taken for tests:   3.484 seconds
+    Complete requests:      10000
     Failed requests:        0
     Write errors:           0
-    Total transferred:      489012 bytes
-    HTML transferred:       207648 bytes
-    Requests per second:    1843.99 [#/sec] (mean)
-    Time per request:       10.846 [ms] (mean)
-    Time per request:       0.542 [ms] (mean, across all concurrent requests)
-    Transfer rate:          880.60 [Kbytes/sec] received
+    Total transferred:      2292655 bytes
+    HTML transferred:       110055 bytes
+    Requests per second:    2870.28 [#/sec] (mean)
+    Time per request:       6.968 [ms] (mean)
+    Time per request:       0.348 [ms] (mean, across all concurrent requests)
+    Transfer rate:          642.63 [Kbytes/sec] received
 
     Connection Times (ms)
                 min  mean[+/-sd] median   max
-    Connect:        0    0   0.2      0       1
-    Processing:     1   10   2.9     11      21
-    Waiting:        1    9   2.8      9      21
-    Total:          1   11   2.9     11      21
+    Connect:        0    0   0.4      0      20
+    Processing:     1    7   2.8      6      31
+    Waiting:        0    4   2.9      4      31
+    Total:          2    7   2.8      6      31
 
     Percentage of the requests served within a certain time (ms)
-    50%     11
-    66%     11
-    75%     12
-    80%     13
-    90%     13
-    95%     15
+    50%      6
+    66%      7
+    75%      7
+    80%      7
+    90%      8
+    95%     12
     98%     16
-    99%     18
-    100%     21 (longest request)
-
+    99%     23
+    100%     31 (longest request)
 
 
 ### Batman.js

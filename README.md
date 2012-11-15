@@ -2,7 +2,7 @@
 
 Hardware
 
-iMac 21 (2007 late)
+iMac 21 (2011 late)
 
 - 2.5GHz Core i5 quad core processor
 - a 500GB hard drive

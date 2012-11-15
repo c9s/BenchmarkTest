@@ -118,43 +118,35 @@ Empty skeleton, Hello World app
 
 Concurrent 20, 1000 requests
 
-Requests per second:    2004.76 [#/sec] (mean)
-Time per request:       9.976 [ms] (mean)
-
-    $ ab -n 1000 -c 20 http://127.0.0.1:1047/
-
-    Document Path:          /
-    Document Length:        1587 bytes
-
     Concurrency Level:      20
-    Time taken for tests:   0.499 seconds
-    Complete requests:      1000
+    Time taken for tests:   4.482 seconds
+    Complete requests:      10000
     Failed requests:        0
     Write errors:           0
-    Total transferred:      1827826 bytes
-    HTML transferred:       1588587 bytes
-    Requests per second:    2004.76 [#/sec] (mean)
-    Time per request:       9.976 [ms] (mean)
-    Time per request:       0.499 [ms] (mean, across all concurrent requests)
-    Transfer rate:          3578.47 [Kbytes/sec] received
+    Total transferred:      2491992 bytes
+    HTML transferred:       120096 bytes
+    Requests per second:    2231.04 [#/sec] (mean)
+    Time per request:       8.964 [ms] (mean)
+    Time per request:       0.448 [ms] (mean, across all concurrent requests)
+    Transfer rate:          542.94 [Kbytes/sec] received
 
     Connection Times (ms)
                 min  mean[+/-sd] median   max
-    Connect:        0    0   0.2      0       1
-    Processing:     1   10   5.2      8      32
-    Waiting:        1    7   4.3      6      25
-    Total:          1   10   5.2      8      33
+    Connect:        0    0   0.6      0      19
+    Processing:     1    9   4.7      7      33
+    Waiting:        1    6   4.1      5      33
+    Total:          1    9   4.7      8      34
 
     Percentage of the requests served within a certain time (ms)
     50%      8
-    66%     10
-    75%     11
-    80%     11
-    90%     16
-    95%     23
-    98%     32
-    99%     32
-    100%     33 (longest request)
+    66%      8
+    75%      9
+    80%      9
+    90%     18
+    95%     20
+    98%     22
+    99%     24
+    100%     34 (longest request)
 
 ### Apache + PHP Roller Router + Extension + APC
 
@@ -321,6 +313,43 @@ Time per request:       1.455 [ms] (mean)
     98%      1
     99%      2
     100%      2 (longest request)
+
+### Perl5.15.7 + Starman
+
+    starman --worker 16 Hello.psgi
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   1.861 seconds
+    Complete requests:      10000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      1320000 bytes
+    HTML transferred:       110000 bytes
+    Requests per second:    5373.09 [#/sec] (mean)
+    Time per request:       3.722 [ms] (mean)
+    Time per request:       0.186 [ms] (mean, across all concurrent requests)
+    Transfer rate:          692.62 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   1.6      0      92
+    Processing:     0    3   8.3      3     125
+    Waiting:        0    3   8.1      3     125
+    Total:          1    4   8.4      3     125
+
+    Percentage of the requests served within a certain time (ms)
+    50%      3
+    66%      3
+    75%      3
+    80%      4
+    90%      4
+    95%      4
+    98%      5
+    99%      6
+    100%    125 (longest request)
 
 ### Perl5.15.7 + Mojo + Feersum
 

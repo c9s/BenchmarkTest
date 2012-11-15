@@ -285,6 +285,43 @@ Time per request:       1.455 [ms] (mean)
     99%      2
     100%      3 (longest request)
 
+### Perl5.15.7 + Feersum (native)
+
+    Document Path:          /
+    Document Length:        0 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   0.051 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      0 bytes
+    HTML transferred:       0 bytes
+    Requests per second:    19517.91 [#/sec] (mean)
+    Time per request:       1.025 [ms] (mean)
+    Time per request:       0.051 [ms] (mean, across all concurrent requests)
+    Transfer rate:          0.00 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     0    1   0.1      0       1
+    Waiting:        0    0   0.0      0       0
+    Total:          1    1   0.1      1       2
+    ERROR: The median and mean for the processing time are more than twice the standard
+        deviation apart. These results are NOT reliable.
+
+    Percentage of the requests served within a certain time (ms)
+    50%      1
+    66%      1
+    75%      1
+    80%      1
+    90%      1
+    95%      1
+    98%      1
+    99%      2
+    100%      2 (longest request)
+
 ### Perl5.15.7 + Mojo + Feersum
 
 20 Concurrent, 1000 requests

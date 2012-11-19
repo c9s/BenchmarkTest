@@ -435,3 +435,40 @@ Time per request:       14.536 [ms] (mean)
     98%     15
     99%     16
     100%     16 (longest request)
+
+### Go 1.0.3 + HTTP Server
+
+    ab -n 1000 -c 20 http://localhost:8080/
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   0.114 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      127000 bytes
+    HTML transferred:       11000 bytes
+    Requests per second:    8769.16 [#/sec] (mean)
+    Time per request:       2.281 [ms] (mean)
+    Time per request:       0.114 [ms] (mean, across all concurrent requests)
+    Transfer rate:          1087.58 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0       1
+    Processing:     0    2   0.4      2       3
+    Waiting:        0    2   0.4      2       3
+    Total:          1    2   0.3      2       4
+
+    Percentage of the requests served within a certain time (ms)
+    50%      2
+    66%      2
+    75%      2
+    80%      3
+    90%      3
+    95%      3
+    98%      3
+    99%      3
+    100%      4 (longest request)

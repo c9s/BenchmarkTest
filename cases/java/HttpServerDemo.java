@@ -30,16 +30,12 @@ class MyHandler implements HttpHandler {
   @Override
   public void handle(HttpExchange t) throws IOException {
       String response = "Hello World";
-
       Headers responseHeaders = t.getResponseHeaders();
       responseHeaders.set("Content-Type", "text/plain");
       // responseHeaders.set("Connection", "close");
       // responseHeaders.set("Content-Length", Integer.toString(response.length()) );
       t.sendResponseHeaders(HttpURLConnection.HTTP_OK, response.length());
-
-      OutputStream responseBody = t.getResponseBody();
-      responseBody.write(response.getBytes());
-      responseBody.close();
+      t.getResponseBody().write(response.getBytes());
       t.close();
   }
 }

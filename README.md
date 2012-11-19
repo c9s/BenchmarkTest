@@ -472,3 +472,60 @@ Time per request:       14.536 [ms] (mean)
     98%      3
     99%      3
     100%      4 (longest request)
+
+### Go 1.0.3 + goweb
+
+    Benchmarking localhost (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:        
+    Server Hostname:        localhost
+    Server Port:            8080
+
+    Document Path:          /
+    Document Length:        11 bytes
+
+    Concurrency Level:      20
+    Time taken for tests:   0.145 seconds
+    Complete requests:      1000
+    Failed requests:        0
+    Write errors:           0
+    Total transferred:      127000 bytes
+    HTML transferred:       11000 bytes
+    Requests per second:    6890.47 [#/sec] (mean)
+    Time per request:       2.903 [ms] (mean)
+    Time per request:       0.145 [ms] (mean, across all concurrent requests)
+    Transfer rate:          854.58 [Kbytes/sec] received
+
+    Connection Times (ms)
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       1
+    Processing:     1    3   0.7      3       7
+    Waiting:        0    3   0.7      2       7
+    Total:          1    3   0.7      3       8
+    WARNING: The median and mean for the waiting time are not within a normal deviation
+            These results are probably not that reliable.
+
+    Percentage of the requests served within a certain time (ms)
+    50%      3
+    66%      3
+    75%      3
+    80%      3
+    90%      3
+    95%      4
+    98%      4
+    99%      6
+    100%      8 (longest request)
+
+

@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
+import java.net.HttpURLConnection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -13,43 +14,32 @@ import com.sun.net.httpserver.HttpServer;
 
 public class HttpServerDemo {
   public static void main(String[] args) throws IOException {
-    InetSocketAddress addr = new InetSocketAddress(8080);
+    int port = 8000;
+    InetSocketAddress addr = new InetSocketAddress(port);
     HttpServer server = HttpServer.create(addr, 0);
 
     server.createContext("/", new MyHandler());
-    // server.setExecutor(Executors.newCachedThreadPool());
-    server.setExecutor(null);
+    server.setExecutor(Executors.newCachedThreadPool());
+    // server.setExecutor(null);
     server.start();
-    System.out.println("Server is listening on port 8080" );
+    System.out.println("Server is listening on port " + port );
   }
 }
 
 class MyHandler implements HttpHandler {
-  public void handle(HttpExchange exchange) throws IOException {
-    String requestMethod = exchange.getRequestMethod();
-    // if (requestMethod.equalsIgnoreCase("GET")) {
+  @Override
+  public void handle(HttpExchange t) throws IOException {
       String response = "Hello World";
-      // responseHeaders.set("Content-Type", "text/html");
-      Headers responseHeaders = exchange.getResponseHeaders();
-      responseHeaders.set("Connection", "close");
+
+      Headers responseHeaders = t.getResponseHeaders();
+      responseHeaders.set("Content-Type", "text/plain");
+      // responseHeaders.set("Connection", "close");
       // responseHeaders.set("Content-Length", Integer.toString(response.length()) );
-      exchange.sendResponseHeaders(200, response.length());
+      t.sendResponseHeaders(HttpURLConnection.HTTP_OK, response.length());
 
-      OutputStream responseBody = exchange.getResponseBody();
+      OutputStream responseBody = t.getResponseBody();
       responseBody.write(response.getBytes());
-      // responseBody.close();
-      exchange.close();
-
-      // Headers requestHeaders = exchange.getRequestHeaders();
-      // Set<String> keySet = requestHeaders.keySet();
-      // Iterator<String> iter = keySet.iterator();
-      // while (iter.hasNext()) {
-      //   String key = iter.next();
-      //   List values = requestHeaders.get(key);
-      //   String s = key + " = " + values.toString() + "\n";
-      //   responseBody.write(s.getBytes());
-      // }
-      // responseBody.close();
-    // }
+      responseBody.close();
+      t.close();
   }
 }
